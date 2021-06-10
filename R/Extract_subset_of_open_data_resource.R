@@ -1,5 +1,5 @@
 ##########################################################
-# Name of script - APICombineVacancyFiles
+# Name of script - Extract subset of Open Data resource
 # Original author: Csilla Scharle
 # Original date: May 2021
 # Type of script: extraction of filtered open data
