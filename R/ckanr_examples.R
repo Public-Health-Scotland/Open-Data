@@ -30,25 +30,25 @@ ckanr_setup(url = "https://www.opendata.nhs.scot/")
 # note: default limit is 31 datasets, so to capture all this needs to be set as higher. 
 #Currently there are 87 datasets on opendata.nhs.scot
 
-package_list(url = "https://www.opendata.nhs.scot/", as = "table", limit = 100)
+package_list(as = "table", limit = 100)
 
 # Alternative option - list all datasets with metadata information included
 
-package_list_current(url = "https://www.opendata.nhs.scot/", as = "table", limit = 100)
+package_list_current(as = "table", limit = 100)
 
 
 
 ### 4 - List tags ----  
 #Get list of tags used on nhs.opendata.scot
 
-tags <- tag_list(url = "https://www.opendata.nhs.scot/", as = "table")
+tags <- tag_list(as = "table")
 
 
 
 ### 5 - List groups ----  
 #Get list of groups used on nhs.opendata.scot
 
-groups <- group_list(url = "https://www.opendata.nhs.scot/", all_fields = T, as = "table")
+groups <- group_list(all_fields = T, as = "table")
 
 
 
@@ -76,13 +76,13 @@ query_datasets[["results"]]
 
 ### 7 - Get dataset metadata ----  
 
-metadata <- package_show(id = "covid-19-vaccination-in-scotland", url = "https://www.opendata.nhs.scot/", as = "table")
+metadata <- package_show(id = "covid-19-vaccination-in-scotland", as = "table")
 
 
 
 ### 8 - List resources in a dataset ----
 
-metadata <- package_show(id = "covid-19-vaccination-in-scotland", url = "https://www.opendata.nhs.scot/", as = "table")
+metadata <- package_show(id = "covid-19-vaccination-in-scotland", as = "table")
 
 res_list <- metadata$resources %>% 
   as_tibble() %>%
@@ -92,7 +92,7 @@ res_list <- metadata$resources %>%
 
 ### 9 - Get resource metadata ---- 
 
-res_metadata <- resource_show(id = "42f17a3c-a4db-4965-ba68-3dffe6bca13a", url = "https://www.opendata.nhs.scot/", as = "table")
+res_metadata <- resource_show(id = "42f17a3c-a4db-4965-ba68-3dffe6bca13a", as = "table")
 
 
 ### END OF SCRIPT ###
