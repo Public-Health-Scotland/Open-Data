@@ -1,5 +1,7 @@
 ### Script to query changes to metadata for a CKAN dataset & send conditional email notification
 
+## need to set up a gmail account and a google project to use gmailr - see https://github.com/r-lib/gmailr for Setup instructions
+
 # Housekeeping
 # empty workspace
 
